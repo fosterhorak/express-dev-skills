@@ -1,6 +1,6 @@
 const skills = [
-    {skill: 'css', level: 'Beginner', has: true},
-    {skill: 'debugging', level: 'Beginner', has: true},
+    {skill: 'css', level: 'newbie', has: true},
+    {skill: 'debugging', level: 'newbie', has: true},
     {skill: 'emotionless', level: 'n/a', has: false}
 ];
   
@@ -13,6 +13,7 @@ function getAll() {
     return skills;
 }
 
-function getOne(s) {
-    return skills[s];
+function getOne(skill) {
+    console.log(`getOne func... skill is: ${skill}`);
+    return skills.find(f => f.skill === skill);
 }

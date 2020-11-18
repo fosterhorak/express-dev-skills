@@ -17,5 +17,7 @@ function index(req, res) {
 
 function show(req, res) {
     const skill = Skill.getOne(req.params.skill);
+    console.log(`req.params.skill is : ${req.params.skill}`);
+    console.log(`show func...skill is: ${skill}`);
     res.render('skills/show', { skill });
 }
