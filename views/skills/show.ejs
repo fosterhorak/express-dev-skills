@@ -9,8 +9,15 @@
 <body>
     <a href="/">Home</a> | <a href="/skills">Skills List</a>
     <h1>Skill Detail</h1>
-    <h3><%= skill.skill %></h3>
+    <h3>skill: <%= skill.skill %></h3>
     <h3>has: <%= skill.has ? 'yes' : 'no' %></h3>
     <h3>skill level: <%= skill.level %></h3>
+    <a href="/skills/<%= skill.skill %>/edit">edit this skill</a>
+    <br>
+    <br>
+    <form action="/skills/<%= skill.skill %>?_method=DELETE"
+        class="delete-form" method="POST">
+        <button type="submit">** delete this skill **</button>
+    </form>
 </body>
 </html>
