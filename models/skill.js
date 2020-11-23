@@ -1,7 +1,8 @@
 const skills = [
     {skill: 'css', has: true},
-    {skill: 'debugging', has: true},
-    {skill: 'emotionless', has: false}
+    {skill: 'expert at debugging', has: false},
+    {skill: 'proper indentation', has: true},
+    {skill: 'understands recurssion', has: false}
 ];
   
 module.exports = {
