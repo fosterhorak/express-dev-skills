@@ -14,13 +14,13 @@ module.exports = {
 };
 
 function update(req, res) {
-    req.body.has = !!req.body.has;
-    console.log(`req.params.skill: ${req.params.skill}`);
     console.log(`req.body.has: ${req.body.has}`);
-    console.log(`req.body: ${req.body}`);
+    console.log(`req.body.has: ${!!req.body.has}`);
+    req.body.has = !!req.body.has;
+
 
     Skill.update(req.params.skill, req.body);
-    res.redirect(`/skills/${req.params.skill}`)
+    res.redirect(`/skills/${req.body.skill}`);
 }
 
 function edit(req, res) {
@@ -49,8 +49,8 @@ function index(req, res) {
 }
 
 function show(req, res) {
-    const skill = Skill.getOne(req.params.skill);
-    console.log(`req.params.skill is : ${req.params.skill}`);
-    console.log(`show func...skill is: ${skill}`);
-    res.render('skills/show', { skill });
+    res.render ('skills/show', {
+        skill: Skill.getOne(req.params.skill)
+
+    });
 }

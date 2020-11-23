@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Express Developer Skill</title>
-</head>
-<body>
+<%- include('../partials/header') %>
+
     <a href="/">Home</a> | <a href="/skills">Skills List</a>
     <h1>Skill Detail</h1>
     <h3>skill: <%= skill.skill %></h3>
     <h3>has: <%= skill.has ? 'yes' : 'no' %></h3>
-    <h3>skill level: <%= skill.level %></h3>
     <a href="/skills/<%= skill.skill %>/edit">edit this skill</a>
     <br>
     <br>
@@ -19,5 +11,5 @@
         class="delete-form" method="POST">
         <button type="submit">** delete this skill **</button>
     </form>
-</body>
-</html>
+
+<%- include('../partials/footer') %>

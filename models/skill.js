@@ -1,7 +1,7 @@
 const skills = [
-    {skill: 'css', level: 'newbie', has: true},
-    {skill: 'debugging', level: 'newbie', has: true},
-    {skill: 'emotionless', level: 'n/a', has: false}
+    {skill: 'css', has: true},
+    {skill: 'debugging', has: true},
+    {skill: 'emotionless', has: false}
 ];
   
 module.exports = {
@@ -13,10 +13,11 @@ module.exports = {
 };
 function update(skill, updatedSkill) {
     console.log(`skill: ${skill}`);
-    console.log(`updatedSkill: ${updatedSkill}`);
+    console.log(`updatedSkillSkill: ${updatedSkill.skill}`);
+    console.log(`updatedSkillHas: ${updatedSkill.has}`);
 
-    const orgSkill = skills.find(s => s.skill === skill);
-    Object.assign(orgSkill, updatedSkill);
+    const oSkill = skills.find(s => s.skill === `${skill}`);
+    Object.assign(oSkill, updatedSkill);
 }
 
 function deleteOne(newSkill) {
