@@ -1,7 +1,7 @@
 var express = require('express');
-const skills = require('../controllers/skills');
 var router = express.Router();
 
+//const skills = require('../controllers/skills'); --think this was a typo
 var skillsCtrl = require('../controllers/skills');
 const skill = require('../models/skill');
 
